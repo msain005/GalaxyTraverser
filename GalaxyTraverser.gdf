@@ -1,0 +1,130 @@
+GDF 1.0 GalaxyTraverser	// Magic word, version number, and Environment name.
+
+PLACES 14	// Fourteen Places in this file
+// In this test file, the first 6 room numbers are chosen in an X-Y fashion
+// The tens digit indicates the column and the units digit indicates the row
+
+12 	Colonized Planet	// CP
+3
+You are currently at the Colonized Planet, your home world
+There are paths to the east and north, and a galactic portal leading down
+The main exit ( from the game ) is to the west
+
+13	Planet of Dangers	// PD
+2
+This is a planet with unknown and potentially dangerous civilizations
+There are paths to the planets of the south and the east
+
+23	Planet of Spoils	// PS
+2
+You have found a planet full of beautiful simple life forms and resources
+There are paths to the planets to the north and south.
+
+22	Mystic Planet	// MP
+3
+This planet has a very soothing and at ease feel in the air
+There are doors to the north and west.
+There is what seems to be a gate leading downwards.
+
+21	Planet of Pools		// PP
+3
+A planet with stable grounding but many pools with liquids of various colors.
+bubbling slowly over large craters.
+Paths leading to the planets of the west and east.
+
+11	Planet of Factory	// PF
+3
+This planet is full of factories, lively with many different robots working.
+Seems to be packaging liquids of various colors, wonder where they got that from.
+There is a door to the east, and a stairway leading up.
+
+
+//The next set of areas is version 1 of the catacombs.
+//You need to travel through and back in order to get to the stage 2 of the game,
+//This is why these rooms are in the shape of the number �2�
+
+101	Asteroid 101		//A1
+2
+This is room 101 of the catacombs
+There are doors to the west and northeast
+
+102	Asteroid 102		//A2
+2
+This is room 102 of the catacombs
+There are doors to the southeast and southwest
+
+103	Asteroid 103		//A3
+2
+This is room 103 of the catacombs
+There are doors to the northwest and south-southeast
+
+104	Asteroid 104		//A4
+2
+This is room 104 of the catacombs
+There are doors to the north-northwest and west-southwest
+
+105	Asteroid 105		//A5
+2
+This is room 105 of the catacombs
+There are doors to the east-northeast and south-southwest
+
+106	Asteroid 106		//A6
+2
+This is room 106 of the catacombs
+There are doors to the south and north-northeast
+
+107	Asteroid 107		//A7
+2
+This is room 107 of the catacombs
+There are doors to the north and east-southeast
+
+108	Asteroid 108		//A8
+2
+This is room 108 of the catacombs
+There are doors to the east and west-northwest
+
+
+DIRECTIONS 31	//Thirty one directions defined ( No number 15 )
+
+//Path numbers are chosen arbitrarily from top to bottom and left to right
+
+1	23	N	13	// PS to PD
+2	13	E	23	// PD to PS
+
+3	13	S	12	// PD to CP
+4	12	N	13	// CP to PD
+5	22	N	-23	// MP to PS, locked
+6	23	S	22	// PS to MP
+
+7	12	W	1	// CP to Exit
+8	12	E	22	// CP to MP
+9	22	W	12	// MP to CP
+
+
+10	12	D	11	// CP to PS
+11	11	U	12	// PF to CP
+12	22	D	21	// PE to PP
+
+13	21	W	11	// PL to PF
+14	11	E	-21	// PF to PP, locked
+// REMOVED:  15	21	E	0	// PL to nowhere, locked
+
+16	21	E	101	//PP to A1
+17	101	NE	102	//A1 to A2
+18	102	SE	103	//A2 to A3
+19	103 	SSE	104	//A3 to A4
+20	104 	WSW	105	//A4 to A5
+21	105 	SSW	106	//A5 to A6
+22	106	S	107	//A6 to A7
+23	107	ESE	108	//A7 to A8
+
+24	108	WNW	107	//A8 to A7
+25	107 	N	106	//A7 to A6
+26	106	NNE	105	//A6 to A5
+27	105	ENE	104	//A5 to A4
+28	104 	NNW	103	//A4 to A3
+29	103	NW	102	//A3 to A2
+30	102	SW	101	//A2 to A1
+31	101	W	21	//A1 to PP
+
+32	108	E	0	// C8 to nowhere, locked
